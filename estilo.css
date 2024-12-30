@@ -1,0 +1,92 @@
+/* Reseteo básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+/* Imágenes de fondo */
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* La imagen ocupa todo el ancho */
+  height: 100%; /* La imagen ocupa todo el alto */
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+  z-index: -1; /* Envía la imagen al fondo */
+}
+
+/* Estilo del contenido */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+/* Botón de confirmación */
+.confirm-button {
+  position: absolute; /* Posición relativa al contenedor padre */
+  top: 60%; /* Ajusta según la altura deseada */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%); /* Ajuste fino para centrar */
+  background-color: #ff6b6b; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  padding: 15px 25px; /* Tamaño del botón */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 1rem; /* Tamaño del texto */
+  font-family: Arial, sans-serif;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  z-index: 1; /* Asegura que el botón esté encima */
+}
+
+/* Efecto hover en el botón */
+.confirm-button:hover {
+  background-color: #ffffff; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo responsive para móviles */
+@media (max-width: 768px) {
+  .confirm-button {
+    font-size: 0.9rem; /* Reduce el tamaño en móviles */
+    padding: 10px 20px;
+  }
+}
